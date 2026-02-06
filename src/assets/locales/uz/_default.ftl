@@ -1,5 +1,5 @@
 text-initial =
-        <tg-emoji emoji-id=5267157697777640672>⚡️</tg-emoji>Har bir ayolning ichida katta potensial bor va buni o'ziga ko’rsatib beradigan ko’zgu kerak. 
+       <tg-emoji emoji-id=5267157697777640672>⚡️</tg-emoji>Har bir ayolning ichida katta potensial bor va buni o'ziga ko’rsatib beradigan ko’zgu kerak. 
 <tg-emoji emoji-id=5451714942157724312>🤍</tg-emoji>“<b>Qalb house</b>” aynan o'sha ko'zgu
 
        Bu kurs ham, klub ham emas. Bu sanoqli ayol jamlangan va Amira Rashidova bilan yaqin bo'ladigan “uzkiy krug”.
