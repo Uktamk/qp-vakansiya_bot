@@ -56,7 +56,7 @@ async def handle_contact(
 ):
     await state.clear()
     result = await api.answer_post_question_2(
-        telegram_id=message.contact.user_id, phone_number=message.contact.phone_number
+        telegram_id=message.contact.user_id, phone_number=message.contact.phone_number, status=True
     )
     if result:
         await message.answer(text=i18n.text.finished.final(_path="_default.ftl"), reply_markup=ReplyKeyboardRemove())

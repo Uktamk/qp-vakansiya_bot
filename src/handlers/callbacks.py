@@ -30,39 +30,7 @@ async def handle_start_factory(
             # parse_mode="HTML",
         )
         return
-    if (
-        user.is_interviewed
-        and user.session.is_finished
-        and (
-            user.session.status == "waiting_for_answer_1"
-            or user.session.status == "waiting_for_answer_2"
-        )
-    ):
-        if user.session.status == "waiting_for_answer_1":
-            await state.clear()
-            await call.message.answer(
-                # chat_id=call.from_user.id,
-                text=i18n.text.finished.first(_path="_default.ftl"),
-                reply_markup=inline.yes_or_no_kb(i18n=i18n),
-            )
-            return
-        if user.session.status == "waiting_for_answer_2":
-            await state.set_state(states.PollStates.waiting_for_contact)
-            await call.message.answer(
-                text=i18n.text.finished.second(_path="_default.ftl"),
-                reply_markup=default.contact_kb(i18n=i18n),
-            )
-            return
-    if (
-        user.is_interviewed
-        and user.session.is_finished
-        and user.session.status == "finished"
-    ):
-        await call.message.answer(
-            text=i18n.text.already_interviewed(_path="_default.ftl"),
-            # parse_mode="HTML",
-        )
-        return
+
     if not user.session.is_finished and user.session.status == "in_progress":
         questionnaire = await api.get_questionnaire(
             questionnaire_id=user.session.questionnaire,
@@ -82,6 +50,50 @@ async def handle_start_factory(
             poll_api_id=questionnaire.id,
         )
         return
+    session = user.session
+    if user.is_interviewed and session.is_finished:
+        # waiting_for_answer_1
+        if session.status == "waiting_for_answer_1":
+            await state.clear()
+
+            text = (
+                session.reply_text
+                if session.reply_text
+                else i18n.text.finished.first(_path="_default.ftl")
+            )
+
+            await call.message.answer(
+                text=text,
+                reply_markup=inline.yes_or_no_kb(i18n=i18n),
+            )
+            return
+
+        # waiting_for_answer_2
+        if session.status == "waiting_for_answer_2":
+            await state.set_state(states.PollStates.waiting_for_contact)
+
+            text = (
+                session.reply_text
+                if session.reply_text
+                else i18n.text.finished.second(_path="_default.ftl")
+            )
+
+            await call.message.answer(
+                text=text,
+                reply_markup=default.contact_kb(i18n=i18n),
+            )
+            return
+
+        # finished
+        if session.status == "finished":
+            text = (
+                session.reply_text
+                if session.reply_text
+                else i18n.text.already_interviewed(_path="_default.ftl")
+            )
+
+            await call.message.answer(text=text)
+            return
 
 
 @callbacks_router.poll_answer(states.PollStates.waiting_for_answer)
@@ -161,7 +173,7 @@ async def handle_first_post_question(
             await state.set_state(states.PollStates.waiting_for_contact)
             await call.message.answer(
                 text=i18n.text.finished.second(_path="_default.ftl"),
-                reply_markup=default.contact_kb(i18n=i18n),   
+                reply_markup=default.contact_kb(i18n=i18n),
             )
         else:
             await state.clear()

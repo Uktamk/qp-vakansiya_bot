@@ -123,12 +123,15 @@ class Api:
                     else data["detail"],
                 )
 
-    async def answer_post_question_2(self, telegram_id, phone_number: str) -> bool:
+    async def answer_post_question_2(
+        self, telegram_id, phone_number: str | None, status: bool
+    ) -> bool:
         async with self.session.post(
             EndPoints.ANSWER_POST_QUESTION_2.value,
             data={
                 "telegram_id": telegram_id,
                 "phone_number": phone_number,
+                "status": status,
             },
         ) as response:
             if response.status == 200:
