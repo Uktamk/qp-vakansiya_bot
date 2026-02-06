@@ -27,5 +27,3 @@ text-finished-second = Siz bilan bog'lanishimiz uchun pastda kontaktingizni qold
 text-finished-final = Kontaktlaringiz qabul qilindi. Sizga tez orada bog'lanamiz.
 text-finished-cancel = 
         "Qalb house"ga qiziqish bildirganingiz va e'tiboringiz uchun rahmat!
-
-        Lekin hozirda biz bu makonni ruhiy holatning boshqa bosqichida bo'lgan ayollar uchun tashkil qilayapmiz.
