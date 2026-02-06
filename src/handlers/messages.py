@@ -2,7 +2,7 @@ from aiogram import Router, F
 from aiogram.filters import CommandStart, StateFilter, and_f
 from aiogram.fsm.context import FSMContext
 from api import Api
-from aiogram.types import Message
+from aiogram.types import Message, ReplyKeyboardRemove
 from aiogram_i18n import I18nContext
 from keyboards import inline_keyboard as inline
 from states import states
@@ -59,4 +59,4 @@ async def handle_contact(
         telegram_id=message.contact.user_id, phone_number=message.contact.phone_number
     )
     if result:
-        await message.answer(text=i18n.text.finished.final(_path="_default.ftl"))
+        await message.answer(text=i18n.text.finished.final(_path="_default.ftl"), reply_markup=ReplyKeyboardRemove())
