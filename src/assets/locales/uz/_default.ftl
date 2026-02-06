@@ -7,14 +7,15 @@ text-initial =
        <tg-emoji emoji-id=5434121252874756456>🕊</tg-emoji>“Qalb house” - 10 oy davom etadigan privat <b>JONLI</b> makon. U ichki halovat, total ishonch va mutlaq erkinlikni haqida.
 
        <u>Biz 10 oy davomida: </u>
-• <i>har oyda 2 marta eksklyuziv jonli uchrashuv,
-• 4 ta xalqaro retrit va sayohat,
-• 2 ta O'zbekiston bo'ylab retrit,
-• barcha a'zolar va Amira Rashidova bilan telegram chat,
-• har bir qalbdosh ayol va Amira Rashidova o'zaro 1 marta individual uchrashuvi bo'ladi.</i>
+       • <i>har oyda 2 marta eksklyuziv jonli uchrashuv,
+       • 4 ta xalqaro retrit va sayohat,
+       • 2 ta O'zbekiston bo'ylab retrit,
+       • barcha a'zolar va Amira Rashidova bilan telegram chat,
+       • har bir qalbdosh ayol va Amira Rashidova o'zaro 1 marta individual uchrashuvi bo'ladi.</i>
 
        👇🏻Agar siz ham "<u>Qalb house</u>"da bo'lishim kerak degan shartsiz ishonchni his qilgan bo'lsangiz, pastdagi tugmani bosib, maxsus so'rovnomadan o'ting!
         
+
 text-already_interviewed = Kontaktlaringiz qabul qilindi. Sizga tez orada bog'lanamiz.
 text-finished-first = 
         "Qalb house"da ishtirok etish qiymati - oyiga 15 mln so‘m. Bu makon faoliyati 10 oy davom etadi.
