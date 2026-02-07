@@ -17,7 +17,9 @@ async def handle_start_cmd(
     await state.clear()
     await message.answer_photo(
         photo="AgACAgIAAxkBAANuaYTbZbvxjP3k6WNGAAFVZTLBTR9bAAIhDWsbN9YoSEpLBVvRDRvAAQADAgADcwADOAQ",
-        caption=i18n.text.initial(_path="_default.ftl"),
+    )
+    await message.answer(
+        text=i18n.text.initial(_path="_default.ftl"),
         reply_markup=inline.start_kb(
             i18n=i18n,
         ),
@@ -56,7 +58,12 @@ async def handle_contact(
 ):
     await state.clear()
     result = await api.answer_post_question_2(
-        telegram_id=message.contact.user_id, phone_number=message.contact.phone_number, status=True
+        telegram_id=message.contact.user_id,
+        phone_number=message.contact.phone_number,
+        status=True,
     )
     if result:
-        await message.answer(text=i18n.text.finished.final(_path="_default.ftl"), reply_markup=ReplyKeyboardRemove())
+        await message.answer(
+            text=i18n.text.finished.final(_path="_default.ftl"),
+            reply_markup=ReplyKeyboardRemove(),
+        )

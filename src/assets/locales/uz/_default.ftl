@@ -1,30 +1,47 @@
 text-initial =
-       <tg-emoji emoji-id=5267157697777640672>⚡️</tg-emoji>Har bir ayolning ichida katta potensial bor va buni o'ziga ko’rsatib beradigan ko’zgu kerak. 
-<tg-emoji emoji-id=5451714942157724312>🤍</tg-emoji>“<b>Qalb house</b>” aynan o'sha ko'zgu
+       🕊"<b>Qalb house</b>" —  ayollar uchun 10 oylik privat makon.  Unda biz har oyda 2 marta JONLI uchrashib hayot yo'limiz, ichki holatimiz, munosabatlarimiz va qarorlarimizni tahlil qilamiz. Kuchli ayollar davrasida birga o‘sib boramiz.
 
-       Bu kurs ham, klub ham emas. Bu sanoqli ayol jamlangan va Amira Rashidova bilan yaqin bo'ladigan “uzkiy krug”.
+        Bu kurs ham, klub ham emas! 
+        Bu Amira Rashidova bilan "uzkiy krug"✔️
 
-       <tg-emoji emoji-id=5434121252874756456>🕊</tg-emoji>“Qalb house” - 10 oy davom etadigan privat <b>JONLI</b> makon. U ichki halovat, total ishonch va mutlaq erkinlikni haqida.
+        "Qalb house" - individual kouchingsiz, “Natijaga olib chiqaman” degan va’dalarsiz, shartsiz ishonch asosida bo'ladi.
+        ❤️Bu makon qo‘llab-quvvatlash, chuqur psixologik tahlil va jonli ishtirok demakdir.
 
-       <u>Biz 10 oy davomida: </u>
-       • <i>har oyda 2 marta eksklyuziv jonli uchrashuv,
-       • 4 ta xalqaro retrit va sayohat,
-       • 2 ta O'zbekiston bo'ylab retrit,
-       • barcha a'zolar va Amira Rashidova bilan telegram chat,
-       • har bir qalbdosh ayol va Amira Rashidova o'zaro 1 marta individual uchrashuvi bo'ladi.</i>
+        <u>Biz 10 oy davomida: </u>
+        • <i>har oyda 2 marta eksklyuziv jonli uchrashuv,
+        • 4 ta xalqaro retrit va sayohat,
+        • 2 ta O'zbekiston bo'ylab retrit,
+        • barcha a'zolar va Amira Rashidova bilan "uzkiy krug" telegram chat,
+        • har bir qalbdosh ayolning Amira Rashidova bilan  1 marta individual uchrashuvi bo'ladi.</i>
 
-       👇🏻Agar siz ham "<u>Qalb house</u>"da bo'lishim kerak degan shartsiz ishonchni his qilgan bo'lsangiz, pastdagi tugmani bosib, maxsus so'rovnomadan o'ting!
-        
+        "<b>Qalb house</b>" — bu hayotida ichki tayanch izlagan va aslini topishni istagan ayollar muhiti.  Biz hamma uchun emas!✨
+        Biz chuqur transformatsiyaga, boshqa ayollar bilan yelkama-yelka turishga tayyor ayollarnigina qabul qilamiz.
 
-text-already_interviewed = Kontaktlaringiz qabul qilindi. Sizga tez orada bog'lanamiz.
+        👇🏻Agar siz ham "<u>Qalb house</u>"da bo'lishim kerak degan shartsiz ishonchni his qilgan bo'lsangiz, pastdagi tugmani bosib, maxsus so'rovnomadan o'ting!
+
+
+text-already_interviewed = 
+        ✅ Kontaktlaringiz qabul qilindi. 
+
+        🥰 Sizga tez orada bog'lanamiz.
+
 text-finished-first = 
-        "Qalb house"da ishtirok etish qiymati - oyiga 15 mln so‘m. Bu makon faoliyati 10 oy davom etadi.
+        <tg-emoji emoji-id=5343655751128726570>❤️</tg-emoji>"Qalb house"da ishtirok etish qiymati - oyiga 15 mln so‘m. 
 
-        Agar siz uchun "Qalb house"ning bir bo'lagi bo'lish va qalbingizning tub-tubiga nazar solish siz uchun muhim bo‘lsa, pastdagi tugmani bosing. 
+        Bu makon faoliyati 10 oy davom etadi.
 
-        Biz siz bilan bog‘lanib, makonimiz haqida batafsil ma’lumot beramiz.
+        Agar siz uchun "Qalb house"ning bir bo'lagi bo'lish va qalbingizning tub-tubiga nazar solish muhim bo‘lsa, pastdagi tugmani bosing<tg-emoji emoji-id=5470177992950946662>👇</tg-emoji>
 
-text-finished-second = Siz bilan bog'lanishimiz uchun pastda kontaktingizni qoldiring
-text-finished-final = Kontaktlaringiz qabul qilindi. Sizga tez orada bog'lanamiz.
+        Biz siz bilan bog‘lanib, makonimiz haqida batafsil ma’lumot beramiz
+
+
+text-finished-second = 
+        👇🏻Siz bilan bog'lanib, “Qalb house” haqida batafsil ma’lumot berish uchun pastda kontaktingizni qoldiring
+
+text-finished-final = 
+        ✅ Kontaktlaringiz qabul qilindi. 
+
+        🥰 Sizga tez orada bog'lanamiz.
+        
 text-finished-cancel = 
-        "Qalb house"ga qiziqish bildirganingiz va e'tiboringiz uchun rahmat!
+        ❤️"Qalb house"ga qiziqish bildirganingiz va e'tiboringiz uchun rahmat!
