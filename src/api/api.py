@@ -59,7 +59,7 @@ class Api:
             EndPoints.CREATE_USER.value,
             json={
                 "telegram_id": telegram_id,
-                "telegram_username": telegram_username,
+                "telegram_username": telegram_username if telegram_username else "Юзернейм отсутствует",
                 "first_name": first_name,
                 # "phone_number": phone_number,
             },

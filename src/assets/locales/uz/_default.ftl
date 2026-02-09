@@ -30,7 +30,7 @@ text-finished-first =
 
         Bu makon faoliyati 10 oy davom etadi.
 
-        Agar siz uchun "Qalb house"ning bir bo'lagi bo'lish va qalbingizning tub-tubiga nazar solish muhim bo‘lsa, pastdagi tugmani bosing<tg-emoji emoji-id=5470177992950946662>👇</tg-emoji>
+        Agar sizga ushbu narx to‘g‘ri kelsa, pastdagi tugmani bosing <tg-emoji emoji-id=5470177992950946662>👇</tg-emoji>
 
         Biz siz bilan bog‘lanib, makonimiz haqida batafsil ma’lumot beramiz
 
