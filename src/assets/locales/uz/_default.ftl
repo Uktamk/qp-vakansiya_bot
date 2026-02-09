@@ -4,18 +4,20 @@ text-initial =
         Bu kurs ham, klub ham emas! 
         Bu Amira Rashidova bilan "uzkiy krug"✔️
 
-        "Qalb house" - individual kouchingsiz, “Natijaga olib chiqaman” degan va’dalarsiz, shartsiz ishonch asosida bo'ladi.
+        "Qalb house" - individual kouching emas, “Natijaga olib chiqaman” degan va’dalar bermaydi. Har bir ayol shartsiz ishonch asosida keladi.
+
         ❤️Bu makon qo‘llab-quvvatlash, chuqur psixologik tahlil va jonli ishtirok demakdir.
 
         <u>Biz 10 oy davomida: </u>
-        • <i>har oyda 2 marta eksklyuziv jonli uchrashuv,
+        • <i>har oyda 2 marta turli formatda jonli uchrashuv,
         • 4 ta xalqaro retrit va sayohat,
-        • 2 ta O'zbekiston bo'ylab retrit,
-        • barcha a'zolar va Amira Rashidova bilan "uzkiy krug" telegram chat,
-        • har bir qalbdosh ayolning Amira Rashidova bilan  1 marta individual uchrashuvi bo'ladi.</i>
+        • O'zbekiston bo'ylab sayohat, dam olish va retritlar,
+        • barcha a'zolar va Amira Rashidova bilan telegram chat,
+        • har bir ayolga individual yondashuv bo'lgani sabab Amira Rashidova bilan 1 marta privat tahliliy uchrashuv bo'ladi.</i>
 
-        "<b>Qalb house</b>" — bu hayotida ichki tayanch izlagan va aslini topishni istagan ayollar muhiti.  Biz hamma uchun emas!✨
-        Biz chuqur transformatsiyaga, boshqa ayollar bilan yelkama-yelka turishga tayyor ayollarnigina qabul qilamiz.
+        "<b>Qalb house</b>" — bu hayotida ichki tayanch izlagan va aslini topishni istagan ayollar muhiti✨
+
+        Biz chuqur transformatsiyaga, boshqa ayollar bilan yelkama-yelka turishga tayyor ayollarnigina qabul qilamiz. Bu degani "Qalb house" hamma uchun emas.
 
         👇🏻Agar siz ham "<u>Qalb house</u>"da bo'lishim kerak degan shartsiz ishonchni his qilgan bo'lsangiz, pastdagi tugmani bosib, maxsus so'rovnomadan o'ting!
 
