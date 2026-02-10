@@ -5,3 +5,6 @@ class StartFactory(CallbackData, prefix="start"):
 
 class AnswerPostFirstQuestionFactory(CallbackData, prefix="answer_1"):
     status: bool
+
+class BlockTheBotFactory(CallbackData, prefix="block_the_bot"):
+    pass

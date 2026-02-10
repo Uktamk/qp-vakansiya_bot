@@ -59,7 +59,9 @@ class Api:
             EndPoints.CREATE_USER.value,
             json={
                 "telegram_id": telegram_id,
-                "telegram_username": telegram_username if telegram_username else "Юзернейм отсутствует",
+                "telegram_username": telegram_username
+                if telegram_username
+                else "Юзернейм отсутствует",
                 "first_name": first_name,
                 # "phone_number": phone_number,
             },
@@ -124,23 +126,33 @@ class Api:
                 )
 
     async def answer_post_question_2(
-        self, telegram_id, phone_number: str | None, status: bool
+        self,
+        telegram_id: int,
+        status: bool,
+        phone_number: str | None = None,
     ) -> bool:
+        """
+        status=True  -> phone_number желательно/обязательно (зависит от бэка)
+        status=False -> phone_number НЕ отправляем (чтобы не ломать валидацию)
+        """
+        payload = {
+            "telegram_id": telegram_id,
+            "status": status,
+        }
+        if status is True:
+            payload["phone_number"] = phone_number
+
         async with self.session.post(
             EndPoints.ANSWER_POST_QUESTION_2.value,
-            data={
-                "telegram_id": telegram_id,
-                "phone_number": phone_number,
-                "status": status,
-            },
+            json=payload,
         ) as response:
-            if response.status == 200:
+            if 200 <= response.status < 300:
                 return True
-            else:
-                data = await response.json()
-                raise e.BaseApiException(
-                    error_code=response.status,
-                    message=data["message"]
-                    if data.get("message", False)
-                    else data["detail"],
-                )
+
+            data = await response.json()
+            raise e.BaseApiException(
+                error_code=response.status,
+                message=data["message"]
+                if data.get("message", False)
+                else data["detail"],
+            )

@@ -181,3 +181,14 @@ async def handle_first_post_question(
                 text=i18n.text.finished.cancel(_path="_default.ftl"),
                 # reply_markup=inline.yes_or_no_kb(i18n=i18n),
             )
+
+
+@callbacks_router.callback_query(f.BlockTheBotFactory.filter())
+async def block_th_bot(
+    call: CallbackQuery, callback_data: f.BlockTheBotFactory, api: Api
+):
+    await call.answer()
+    await api.answer_post_question_2(telegram_id=call.from_user.id, status=False)
+    await call.message.answer(
+        text="❤️ “Qalb house”ga qiziqish bildirganingiz va e'tiboringiz uchun rahmat!"
+    )
