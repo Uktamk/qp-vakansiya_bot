@@ -83,6 +83,7 @@ class Api:
     async def create_answer(
         self, telegram_id: int, questionnaire_id: int, answer_id: int
     ) -> str:
+        print(questionnaire_id)
         async with self.session.post(
             EndPoints.CREATE_ANSWER.value,
             json={
@@ -99,6 +100,7 @@ class Api:
                 return response_model
             else:
                 data = await response.json()
+                print(data)
                 raise e.BaseApiException(
                     error_code=response.status,
                     message=data["message"]

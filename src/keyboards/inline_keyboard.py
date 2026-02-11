@@ -24,11 +24,11 @@ def yes_or_no_kb(i18n: I18nContext) -> InlineKeyboardMarkup:
         ),
         callback_data=f.AnswerPostFirstQuestionFactory(status=True).pack(),
     )
-    markup.button(
-        text=i18n.button.no(
-            _path="_buttons.ftl",
-        ),
-        callback_data=f.AnswerPostFirstQuestionFactory(status=False).pack(),
-    )
+    # markup.button(
+    #     text=i18n.button.no(
+    #         _path="_buttons.ftl",
+    #     ),
+    #     callback_data=f.AnswerPostFirstQuestionFactory(status=False).pack(),
+    # )
     markup.adjust(2)
     return markup.as_markup()

@@ -1,49 +1,46 @@
-text-initial =
-       🕊"<b>Qalb house</b>" —  ayollar uchun 10 oylik privat makon.  Unda biz har oyda 2 marta JONLI uchrashib hayot yo'limiz, ichki holatimiz, munosabatlarimiz va qarorlarimizni tahlil qilamiz. Kuchli ayollar davrasida birga o‘sib boramiz.
+text-initial-first =
+        <tg-emoji emoji-id=5204041465440778093>❤️</tg-emoji><b> "QALB HOUSE" — Бу курс ҳам, клуб ҳам эмас! </b>
 
-        Bu kurs ham, klub ham emas! 
-        Bu Amira Rashidova bilan "uzkiy krug"✔️
+        <tg-emoji emoji-id=5203983444727574936>❗️</tg-emoji>Бу Амира Рашидова томонидан илк бор тор доирада ва индивидуал ёндашув асосида ташкил этилган қалбдош аёллар макони.  
 
-        "Qalb house" - individual kouching emas, “Natijaga olib chiqaman” degan va’dalar bermaydi. Har bir ayol shartsiz ishonch asosida keladi.
+        <tg-emoji emoji-id=5203935976749020081>🔘</tg-emoji>«Qalb house» концепцияси цикллардан иборат. <b>Ҳар бир цикл 3 ой давом этади.</b> Бу «Qalb house»га келган ҳар бир аёл ўзига кераклисини айнан мана шу қисқа давр ичида олишига қаратилган.
 
-        ❤️Bu makon qo‘llab-quvvatlash, chuqur psixologik tahlil va jonli ishtirok demakdir.
 
-        <u>Biz 10 oy davomida: </u>
-        • <i>har oyda 2 marta turli formatda jonli uchrashuv,
-        • 4 ta xalqaro retrit va sayohat,
-        • O'zbekiston bo'ylab sayohat, dam olish va retritlar,
-        • barcha a'zolar va Amira Rashidova bilan telegram chat,
-        • har bir ayolga individual yondashuv bo'lgani sabab Amira Rashidova bilan 1 marta privat tahliliy uchrashuv bo'ladi.</i>
+text-initial-second = 
+        <tg-emoji emoji-id=5204101539148345788>🌱</tg-emoji><b> 3 ой — бу аёл ўсиши, ички овозни тинглаши ва ҳаётини қайта таҳлили учун идеал муддат. </b>
 
-        "<b>Qalb house</b>" — bu hayotida ichki tayanch izlagan va aslini topishni istagan ayollar muhiti✨
+        <tg-emoji emoji-id=5204286583519325984>✅</tg-emoji><i>Ҳар бир иштирокчига индивидуал ёндашилади ва аёлнинг ички сўрови асосида у билан ишланади. Бу макон қўллаб-қувватлаш, чуқур психологик таҳлил ва жонли иштирок демакдир.
+        </i>
+        <tg-emoji emoji-id=5204421690305556008>➡️</tg-emoji>Шу сабаб аксарият ҳолларда аёлга “Qalb house”да 10 ой давомида  бўлиш шарт бўлмайди. Агар аёл бу муҳитда яна қолишни истаса, у кейинги циклга бемалол қўшила олади.
 
-        Biz chuqur transformatsiyaga, boshqa ayollar bilan yelkama-yelka turishga tayyor ayollarnigina qabul qilamiz. Bu degani "Qalb house" hamma uchun emas.
 
-        👇🏻Agar siz ham "<u>Qalb house</u>"da bo'lishim kerak degan shartsiz ishonchni his qilgan bo'lsangiz, pastdagi tugmani bosib, maxsus so'rovnomadan o'ting!
+text-initial-third = 
+        <tg-emoji emoji-id=5203949780773908360>✉️</tg-emoji> <b>Биз 3 ойлик программани тайёрладик. </b>
+
+        <tg-emoji emoji-id=5204199451517792845>📌</tg-emoji>1-мартдан то 1-июньга қадар бизнинг маконда қандай тадбирлар ва учрашувлар бўлиши ҳаммаси ўша программада батафсил кўрсатилган. 
+
+        <tg-emoji emoji-id=5204373840074910460>💡</tg-emoji>Биз шу уч ой ичида ҳар бир аёлга индивидуал ёндашамиз, иккита хорижий ретритга чиқамиз, шундан биттаси Иорданияга, иккинчиси Жанубий Африка, Намибия ва Замбияга бўлади.    
+
+        <tg-emoji emoji-id=5203983444727574936>❗️</tg-emoji><b>Программамиз фақат сўровномадан ўтганларга тақдим этилади. “Qalb house”да жойлар чеклангани учун, ҳаммани ҳам ололмаймиз.</b>
+
 
 
 text-already_interviewed = 
-        ✅ Kontaktlaringiz qabul qilindi. 
+        ✅ Контактларингиз қабул қилинди.
 
-        🥰 Sizga tez orada bog'lanamiz.
+        🥰 Сизга тез орада боғланамиз.
 
 text-finished-first = 
-        <tg-emoji emoji-id=5343655751128726570>❤️</tg-emoji>"Qalb house"da ishtirok etish qiymati - oyiga 15 mln so‘m. 
-
-        Bu makon faoliyati 10 oy davom etadi.
-
-        Agar sizga ushbu narx to‘g‘ri kelsa, pastdagi tugmani bosing <tg-emoji emoji-id=5470177992950946662>👇</tg-emoji>
-
-        Biz siz bilan bog‘lanib, makonimiz haqida batafsil ma’lumot beramiz
+        <b>Марҳамат, “Qalb house”нинг 3 ойлик программаси билан танишинг.</b>
 
 
 text-finished-second = 
-        👇🏻Siz bilan bog'lanib, “Qalb house” haqida batafsil ma’lumot berish uchun pastda kontaktingizni qoldiring
+        👇🏻Сиз билан боғланиб, “Qalb house” ҳақида батафсил маълумот бериш учун пастда контактингизни қолдиринг
 
 text-finished-final = 
-        ✅ Kontaktlaringiz qabul qilindi. 
+        ✅ Контактларингиз қабул қилинди.
 
-        🥰 Sizga tez orada bog'lanamiz.
+        🥰 Сизга тез орада боғланамиз.
         
 text-finished-cancel = 
-        ❤️"Qalb house"ga qiziqish bildirganingiz va e'tiboringiz uchun rahmat!
+        ❤️"Qalb house"га қизиқиш билдирганингиз ва эътиборингиз учун раҳмат!

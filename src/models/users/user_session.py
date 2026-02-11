@@ -1,11 +1,12 @@
 import msgspec
 from datetime import datetime
 from typing import Optional
+from ..questionnaires import Questionnaire
 
 
 class UserQuestionnaireSession(msgspec.Struct, kw_only=True):
     id: int
-    questionnaire: int
+    questionnaire: Questionnaire
     status: str
     current_ordering: int
     is_finished: bool

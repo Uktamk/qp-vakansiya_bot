@@ -7,6 +7,7 @@ from aiogram_i18n import I18nContext
 from states import states
 from exceptions import exceptions as e
 from aiogram.fsm.context import FSMContext
+from aiogram.types import FSInputFile
 import models
 from keyboards import inline_keyboard as inline
 from keyboards import default_keyboard as default
@@ -33,7 +34,7 @@ async def handle_start_factory(
 
     if not user.session.is_finished and user.session.status == "in_progress":
         questionnaire = await api.get_questionnaire(
-            questionnaire_id=user.session.questionnaire,
+            questionnaire_id=user.session.questionnaire.ordering,
         )
         poll = await call.message.answer_poll(
             question=questionnaire.question,
@@ -47,7 +48,7 @@ async def handle_start_factory(
         await state.set_state(states.PollStates.waiting_for_answer)
         await state.update_data(
             poll_message_id=poll.message_id,
-            poll_api_id=questionnaire.id,
+            poll_api_id=questionnaire.ordering,
         )
         return
     session = user.session
@@ -62,9 +63,13 @@ async def handle_start_factory(
                 else i18n.text.finished.first(_path="_default.ftl")
             )
 
-            await call.message.answer(
-                text=text,
+            await call.message.answer_document(
+                document=FSInputFile(path="assets/files/presentation.pdf"),
+                caption=text,
                 reply_markup=inline.yes_or_no_kb(i18n=i18n),
+
+                
+                protect_content=True,
             )
             return
 
@@ -136,15 +141,17 @@ async def handle_poll_answer(
         await state.set_state(states.PollStates.waiting_for_answer)
         await state.update_data(
             poll_message_id=new_poll.message_id,
-            poll_api_id=new_questionnaire.id,
+            poll_api_id=new_questionnaire.ordering,
         )
         return
     if result.status_code == "finished":
         await state.clear()
-        await bot.send_message(
+        await bot.send_document(
             chat_id=poll_answer.user.id,
-            text=i18n.text.finished.first(_path="_default.ftl"),
+            document=FSInputFile(path="assets/files/presentation.pdf"),
+            caption=i18n.text.finished.first(_path="_default.ftl"),
             reply_markup=inline.yes_or_no_kb(i18n=i18n),
+            protect_content=True,
         )
         return
     if result.status_code == "finished_incorrect":
@@ -184,7 +191,7 @@ async def handle_first_post_question(
 
 
 @callbacks_router.callback_query(f.BlockTheBotFactory.filter())
-async def block_th_bot(
+async def block_the_bot(
     call: CallbackQuery, callback_data: f.BlockTheBotFactory, api: Api
 ):
     await call.answer()

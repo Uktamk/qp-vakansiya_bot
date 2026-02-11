@@ -1,4 +1,4 @@
-button-start = So'rovnomani boshlash
-button-yes = Ha, tayyorman
+button-start = Сўровномани бошлаш
+button-yes = Кейинги қадам
 button-no = Shart emas
 button-contact = 📞 Telefon raqamini yuborish

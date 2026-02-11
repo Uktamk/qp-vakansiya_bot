@@ -1,11 +1,13 @@
 from aiogram import Router, F
 from aiogram.filters import CommandStart, StateFilter, and_f
 from aiogram.fsm.context import FSMContext
+from aiogram.types.input_file import FSInputFile
 from api import Api
 from aiogram.types import Message, ReplyKeyboardRemove
 from aiogram_i18n import I18nContext
 from keyboards import inline_keyboard as inline
 from states import states
+import asyncio
 
 messages_router = Router()
 
@@ -16,10 +18,19 @@ async def handle_start_cmd(
 ):
     await state.clear()
     await message.answer_photo(
-        photo="AgACAgIAAxkBAANuaYTbZbvxjP3k6WNGAAFVZTLBTR9bAAIhDWsbN9YoSEpLBVvRDRvAAQADAgADcwADOAQ",
+        photo=FSInputFile(path="assets/images/initial.png"),
+        caption=i18n.text.initial.first(_path="_default.ftl"),
     )
+    await asyncio.sleep(3)
     await message.answer(
-        text=i18n.text.initial(_path="_default.ftl"),
+        text=i18n.text.initial.second(_path="_default.ftl"),
+        # reply_markup=inline.start_kb(
+        #     i18n=i18n,
+        # ),
+    )
+    await asyncio.sleep(3)
+    await message.answer(
+        text=i18n.text.initial.third(_path="_default.ftl"),
         reply_markup=inline.start_kb(
             i18n=i18n,
         ),
