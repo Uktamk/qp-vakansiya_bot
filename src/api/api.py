@@ -81,15 +81,21 @@ class Api:
                 )
 
     async def create_answer(
-        self, telegram_id: int, questionnaire_id: int, answer_id: int
+        self,
+        telegram_id: int,
+        questionnaire_id: int,
+        answer_id: int | None,
+        open_ended_answer: str | None,
     ) -> str:
         print(questionnaire_id)
+        print(answer_id)
         async with self.session.post(
             EndPoints.CREATE_ANSWER.value,
             json={
                 "telegram_id": telegram_id,
                 "questionnaire_id": questionnaire_id,
-                "answer_id": answer_id,
+                "answer_id": answer_id if answer_id is not None else None,
+                "open_ended_answer": open_ended_answer if open_ended_answer else None,
             },
         ) as response:
             if response.status == 200:

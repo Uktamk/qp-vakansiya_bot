@@ -43,6 +43,16 @@ async def handle_user_does_not_exist_error(
         questionnaire = await api.get_questionnaire(
             questionnaire_id=user.session.questionnaire.ordering,
         )
+        if questionnaire.is_open_ended_question:
+            await call.message.answer(
+                text=questionnaire.question,
+            )
+            await state.set_state(states.PollStates.waiting_for_answer)
+            await state.update_data(
+                # poll_message_id=poll.message_id,
+                poll_api_id=questionnaire.ordering,
+            )
+            return
         poll = await call.message.answer_poll(
             question=questionnaire.question,
             options=[

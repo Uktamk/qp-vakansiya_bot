@@ -7,5 +7,6 @@ class Questionnaire(msgspec.Struct, kw_only=True):
     id: int
     ordering: int
     question: str
+    is_open_ended_question: bool
     incorrect_answer_text: Optional[str]
     answers: List[QuestionnaireAnswer]

@@ -10,6 +10,8 @@ def start_kb(i18n: I18nContext) -> InlineKeyboardMarkup:
         text=i18n.button.start(
             _path="_buttons.ftl",
         ),
+        style="primary",
+        icon_custom_emoji_id="5789901732196650829",
         callback_data=f.StartFactory().pack(),
     )
     markup.adjust(1)

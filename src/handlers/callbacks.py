@@ -36,6 +36,16 @@ async def handle_start_factory(
         questionnaire = await api.get_questionnaire(
             questionnaire_id=user.session.questionnaire.ordering,
         )
+        if questionnaire.is_open_ended_question:
+            await call.message.answer(
+                text=questionnaire.question,
+            )
+            await state.set_state(states.PollStates.waiting_for_answer)
+            await state.update_data(
+                # poll_message_id=poll.message_id,
+                poll_api_id=questionnaire.ordering,
+            )
+            return
         poll = await call.message.answer_poll(
             question=questionnaire.question,
             options=[
@@ -55,22 +65,18 @@ async def handle_start_factory(
     if user.is_interviewed and session.is_finished:
         # waiting_for_answer_1
         if session.status == "waiting_for_answer_1":
-            await state.clear()
-
-            text = (
-                session.reply_text
+            await state.set_state(states.PollStates.waiting_for_portfolio)
+            await call.message.answer(
+                text=session.reply_text
                 if session.reply_text
-                else i18n.text.finished.first(_path="_default.ftl")
+                else i18n.text.finished.first(_path="_default.ftl"),
             )
-
-            await call.message.answer_document(
-                document=FSInputFile(path="assets/files/presentation.pdf"),
-                caption=text,
-                reply_markup=inline.yes_or_no_kb(i18n=i18n),
-
-                
-                protect_content=True,
-            )
+            # await call.message.answer_document(
+            #     document=FSInputFile(path="assets/files/presentation.pdf"),
+            #     caption=text,
+            #     reply_markup=inline.yes_or_no_kb(i18n=i18n),
+            #     protect_content=True,
+            # )
             return
 
         # waiting_for_answer_2
@@ -120,11 +126,23 @@ async def handle_poll_answer(
         telegram_id=poll_answer.user.id,
         questionnaire_id=data["poll_api_id"],
         answer_id=poll_answer.option_ids[0],
+        open_ended_answer=None,
     )
     if result.status_code == "moving_to_next_question":
         new_questionnaire = await api.get_questionnaire(
             questionnaire_id=result.next_questionnaire
         )
+        if new_questionnaire.is_open_ended_question:
+            await bot.send_message(
+                chat_id=poll_answer.user.id,
+                text=new_questionnaire.question,
+            )
+            await state.set_state(states.PollStates.waiting_for_answer)
+            await state.update_data(
+                # poll_message_id=poll.message_id,
+                poll_api_id=new_questionnaire.ordering,
+            )
+            return
         new_poll = await bot.send_poll(
             chat_id=poll_answer.user.id,
             question=new_questionnaire.question,
@@ -145,13 +163,10 @@ async def handle_poll_answer(
         )
         return
     if result.status_code == "finished":
-        await state.clear()
-        await bot.send_document(
+        await state.set_state(states.PollStates.waiting_for_portfolio)
+        await bot.send_message(
             chat_id=poll_answer.user.id,
-            document=FSInputFile(path="assets/files/presentation.pdf"),
-            caption=i18n.text.finished.first(_path="_default.ftl"),
-            reply_markup=inline.yes_or_no_kb(i18n=i18n),
-            protect_content=True,
+            text=i18n.text.finished.first(_path="_default.ftl"),
         )
         return
     if result.status_code == "finished_incorrect":
